@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>古典概型与离散型随机变量</title>
+    <link href="/2024/10/13/%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%E4%B8%8E%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/"/>
+    <url>/2024/10/13/%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%E4%B8%8E%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/</url>
+    
+    <content type="html"><![CDATA[<h1 id="先试试水">先试试水~</h1><p>古典概型，确定性事件...<br />试一下嵌入复杂公式罢！<br /><span class="math display">\[  f(p,m)=\frac{1}{\Sigma_{i=1}^{\lambda}N_i}\]</span></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>-概率论与数理统计</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>-数学</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>测试文章</title>
+    <link href="/2024/10/13/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/"/>
+    <url>/2024/10/13/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="测试一下吧">测试一下吧！</h1><p>测试好了就贴上芙宝的教堂图！！！ <img src="https://www.helloimg.com/i/2024/10/13/670b4eb055555.jpg" alt="极昼机体" /></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>-划水</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>-测试</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2024/10/13/hello-world/"/>
+    <url>/2024/10/13/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="quick-start">Quick Start</h2><h3 id="create-a-new-post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="run-server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="generate-static-files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="deploy-to-remote-sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>-划水</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  
+</search>
