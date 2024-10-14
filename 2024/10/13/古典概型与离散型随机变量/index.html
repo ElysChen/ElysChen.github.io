@@ -19,15 +19,15 @@
   <meta name="author" content="ElysChen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="随机事件与概率 出现结果不唯一，事先不确定结果的，称为随机现象；为了研究随机现象的规律（结果的分布）而进行的试验称为随机试验（记为\(E\)或\(E_i\)），随机试验具有以下三条性质：  可重复  多结果  不确定  随机试验\(E\)的每一种可能的结果称为一个样本点，记为\(\omega_i~~\). \(E\)的所有可能的结果作为元素构成的集合称为试验\(E\)的样本空间，">
+    <meta name="description" content="随机事件与概率 试验与事件   出现结果不唯一，事先不确定结果的，称为随机现象；为了研究随机现象的规律（结果的分布）而进行的试验称为随机试验（记为\(E\)或\(E_i\)），随机试验具有以下三条性质：  可重复  多结果  不确定    随机试验\(E\)的每一种可能的结果称为一个样本点，记为\(\omega_i~~\). \(E\)的所有可能的结果作为元素构成的集合称为试验">
 <meta property="og:type" content="article">
 <meta property="og:title" content="随机事件与概率，条件概率与独立性，离散型随机变量">
 <meta property="og:url" content="http://example.com/2024/10/13/%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%E4%B8%8E%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/index.html">
 <meta property="og:site_name" content="ElysChen">
-<meta property="og:description" content="随机事件与概率 出现结果不唯一，事先不确定结果的，称为随机现象；为了研究随机现象的规律（结果的分布）而进行的试验称为随机试验（记为\(E\)或\(E_i\)），随机试验具有以下三条性质：  可重复  多结果  不确定  随机试验\(E\)的每一种可能的结果称为一个样本点，记为\(\omega_i~~\). \(E\)的所有可能的结果作为元素构成的集合称为试验\(E\)的样本空间，">
+<meta property="og:description" content="随机事件与概率 试验与事件   出现结果不唯一，事先不确定结果的，称为随机现象；为了研究随机现象的规律（结果的分布）而进行的试验称为随机试验（记为\(E\)或\(E_i\)），随机试验具有以下三条性质：  可重复  多结果  不确定    随机试验\(E\)的每一种可能的结果称为一个样本点，记为\(\omega_i~~\). \(E\)的所有可能的结果作为元素构成的集合称为试验">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-13T11:58:50.000Z">
-<meta property="article:modified_time" content="2024-10-13T14:15:02.581Z">
+<meta property="article:modified_time" content="2024-10-14T11:45:23.102Z">
 <meta property="article:author" content="ElysChen">
 <meta property="article:tag" content="-数学">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          137 字
+          1.7k 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          2 分钟
+          15 分钟
         
       </span>
     
@@ -299,7 +299,8 @@
               <div class="markdown-body">
                 
                 <h1 id="随机事件与概率">随机事件与概率</h1>
-<p>出现结果不唯一，事先不确定结果的，称为<font color=#F08080 size=4 face="黑体">随机现象</font>；为了研究随机现象的规律<font color=#F08080>（结果的分布）</font>而进行的试验称为<font color=#F08080 size=4 face="黑体">随机试验</font><font color=#B0C4DE size=4 face="黑体">（记为<span class="math inline">\(E\)</span>或<span class="math inline">\(E_i\)</span>）</font>，随机试验具有以下三条性质：</p>
+<h2 id="试验与事件">试验与事件</h2>
+<p>  出现结果不唯一，事先不确定结果的，称为<font color=#F08080 size=4 face="黑体">随机现象</font>；为了研究随机现象的规律<font color=#F08080>（结果的分布）</font>而进行的试验称为<font color=#F08080 size=4 face="黑体">随机试验</font><font color=#B0C4DE size=4 face="黑体">（记为<span class="math inline">\(E\)</span>或<span class="math inline">\(E_i\)</span>）</font>，随机试验具有以下三条性质：</p>
 <ul>
 <li>可重复<br />
 </li>
@@ -307,7 +308,79 @@
 </li>
 <li>不确定</li>
 </ul>
-<p>随机试验<span class="math inline">\(E\)</span>的每一种可能的结果称为一个<font color=#F08080 size=4 face="黑体">样本点</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(\omega_i~~\)</span></font>. <span class="math inline">\(E\)</span>的所有可能的结果作为元素构成的集合称为<font color=#F08080 size=4 face="黑体">试验<span class="math inline">\(E\)</span>的样本空间</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(\Omega\)</span></font></p>
+<p>  随机试验<span class="math inline">\(E\)</span>的每一种可能的结果称为一个<font color=#F08080 size=4 face="黑体">样本点</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(\omega_i~~\)</span></font>. <span class="math inline">\(E\)</span>的所有可能的结果作为元素构成的集合称为<font color=#F08080 size=4 face="黑体">试验<span class="math inline">\(E\)</span>的样本空间</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(\Omega\)</span></font>.样本空间有多种，样本点有限则为<font color=#F08080 size=4>有限样本空间</font>，样本点无限但可列即为<font color=#F08080 size=4 face="黑体">可列样本空间</font>，样本的无线且不可列即为<font color=#F08080 size=4 face="黑体">不可列样本空间</font>。有限样本空间和无限样本空间统称为<font color=#F08080 size=4 face="黑体">离散样本空间</font>。<br />
+  包含了一些具有相同特性的样本点的集合称为<font color=#F08080 size=4 face="黑体">事件</font>，事件是样本空间的子集。事件也有多种，只包含一个样本点的事件称<font color=#F08080 size=4 face="黑体">基本事件</font>，样本空间<span class="math inline">\(\Omega\)</span>本身称<font color=#F08080 size=4 face="黑体">必然事件</font>，空集<span class="math inline">\(\varnothing\)</span>称<font color=#F08080 size=4 face="黑体">不可能事件</font>。</p>
+<h2 id="事件的关系与运算">事件的关系与运算</h2>
+<p><font color=#9370D8 size=4 face="黑体">1&gt;包含关系</font><br />
+  对事件A,B，若A发生则必然B发生，则<span class="math inline">\(A\subset B\)</span>.<br />
+<font color=#9370D8 size=4 face="黑体">2&gt;等于关系</font><br />
+  若<span class="math inline">\(A\subset B\)</span>且<span class="math inline">\(B\subset A\)</span>,则称<font color=#F08080 size=4 face="黑体">事件A与事件B相等</font>,记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(A=B\)</span></font>。<br />
+<font color=#9370D8 size=4 face="黑体">3&gt;事件的并/和</font><br />
+  事件F发生时，若事件<span class="math inline">\(A_1,...,A_n\)</span>中至少有一个发生，则称<font color=#F08080 size=4 face="黑体">事件<span class="math inline">\(F\)</span>为事件<span class="math inline">\(A_i,...,A_n\)</span>的并/和</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(F=\bigcup \limits_{i=1}^{n}A_i=A_1\cup A_2 \cup ... \cup A_n=\{\omega|\exists i\in[n] \hspace{0.2cm} s.t.\hspace{0.2cm}\omega \in A_i\}\)</span></font>.<br />
+<font color=#9370D8 size=4 face="黑体">4&gt;事件的交/积</font><br />
+  事件F发生时，若事件<span class="math inline">\(A_1,...,A_n\)</span>全部都发生，则称<font color=#F08080 size=4 face="黑体">事件<span class="math inline">\(F\)</span>为事件<span class="math inline">\(A_i,...,A_n\)</span>的交/积</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(F=\bigcap \limits_{i=1}^{n}A_i=A_1\cap A_2 \cap ... \cap A_n=\{\omega|\forall i\in[n] \hspace{0.2cm} s.t.\hspace{0.2cm}\omega \in A_i\}\)</span></font>.<br />
+<font color=#9370D8 size=4 face="黑体">5&gt;对立/逆事件</font><br />
+  所有不属于事件A的基本事件所构成的事件称为<font color=#F08080 size=4 face="黑体">事件A的对立事件（逆事件）</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(\bar{A}=\Omega-A\)</span></font>.<br />
+<font color=#9370D8 size=4 face="黑体">6&gt;事件的差</font><br />
+  事件F发生时，若事件<span class="math inline">\(A\)</span>发生且事件<span class="math inline">\(B\)</span>不发生，则称<font color=#F08080 size=4 face="黑体">事件<span class="math inline">\(F\)</span>为事件<span class="math inline">\(A与B\)</span>的差</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(F=A-B=A-AB=A\bar{B}\)</span></font><br />
+<font color=#9370D8 size=4 face="黑体">7&gt;互不相容/互斥事件</font><br />
+  若事件<span class="math inline">\(A\)</span>和事件<span class="math inline">\(B\)</span>不能同时发生，则称<font color=#F08080 size=4 face="黑体">事件<span class="math inline">\(A\)</span>与事件<span class="math inline">\(B\)</span>互不相容（互斥）</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(A\cap B=\varnothing\)</span></font>.</p>
+<blockquote>
+<p><strong>会犯错吗？</strong></p>
+<ul>
+<li>如果只有<span class="math inline">\(A-B=A-C\)</span>,那么事件B,C未必满足<span class="math inline">\(B=C\)</span>。</li>
+</ul>
+<hr />
+</blockquote>
+<blockquote>
+<p><strong><font color=orange size=4>techniques</font></strong></p>
+<ul>
+<li><p>证明两个事件的运算是相等的，我们可以使用瞪眼法，也可以将二者都化为某一特定范式，如BNF或者DNF。</p></li>
+<li><p>e.g.证明<span class="math inline">\((A-B)\cup (B-C)=(A\cup B)-BC\)</span>.<br />
+<font color=#00ffff size=3 face="黑体">遇到<span class="math inline">\(A-B\)</span>先展开为<span class="math inline">\(A\cap \bar{B}\)</span>，左右两式都化为析取范式，则有:<br />
+左式=<span class="math inline">\((A\cap \bar{B})\cup(B\cap \bar{C})\)</span><br />
+右式=<span class="math inline">\((A\cap \bar{B})\cup(B\cap \bar{C})\cup(A\cap\bar{C})\)</span><br />
+此时右式确实满足析取范式，只是多出来一项冗余项，需要借助语义来证明它可以被前两项的并集包含，进而证明可以去掉冗余项。则：<br />
+<span class="math inline">\(A\cap \bar{C}=(A\cap\bar{C})\cap(B\cup\bar{B})=(A\cap\bar{C}\cap B)\cup(A\cap \bar{C}\cap\bar{B})\)</span><br />
+又注意到<span class="math inline">\((A\cap\bar{C}\cap B)\subset(\bar{C}\cap B),(A\cap \bar{C}\cap\bar{B})\subset(A\cap\bar{B})\)</span>,故右式=<span class="math inline">\((A\cap \bar{B})\cup(B\cap \bar{C})\)</span>=左式。 </font></p></li>
+</ul>
+<hr />
+</blockquote>
+<h2 id="频率与概率公理化">频率与概率公理化</h2>
+<p>  事件<span class="math inline">\(A\)</span>在相同条件下重复进行的<span class="math inline">\(n\)</span>次试验中发生了<span class="math inline">\(n_A\)</span>次，则称<span class="math inline">\(f_n(A)=\frac{n_A}{n}\)</span>为<font color=#F08080 size=4 face="黑体">事件A在n次试验中发生的概率</font>，并称<span class="math inline">\(n_A\)</span>为<font color=#F08080 size=4 face="黑体">事件A发生的频数</font>。<br />
+  概率的统计定义：<font color=#F08080 size=4 face="黑体">随机事件<span class="math inline">\(A\)</span>在大量重复试验中发生的频率总是稳定在一个常数<span class="math inline">\(p\)</span>附近摆动，且随着试验次数增加而摆幅渐小，则称<span class="math inline">\(p\)</span>为事件<span class="math inline">\(A\)</span>发生的概率</font>，记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(P(A)=p\)</span></font><br />
+  概率公理化定义：<font color=#F08080 size=4 face="黑体">随机试验<span class="math inline">\(E\)</span>所对应的样本空间<span class="math inline">\(\Omega\)</span>中每一个随机事件<span class="math inline">\(A\)</span>，均赋予一实数<span class="math inline">\(P(A)\)</span>，且满足以下条件：<br />
+<span class="math inline">\(1^o\)</span> 非负性： 对任意事件<span class="math inline">\(A\)</span>有<span class="math inline">\(P(A)\geq0\)</span>；<br />
+<span class="math inline">\(2^o\)</span> 规范性： 对样本空间<span class="math inline">\(\Omega\)</span>有<span class="math inline">\(P(\Omega)=1\)</span>；<br />
+<span class="math inline">\(3^o\)</span> 可列可加性： 若<span class="math inline">\(A_1,A_2,...,A_n,...\)</span>是可列无穷个互不相容的事件，即<span class="math inline">\(A_iA_j=\varnothing(i\neq j)\)</span>，有<span class="math inline">\(P(A_1\cup A_2\cup ...\cup A_n\cup...)=P(A_1)+P(A_2)+...+P(A_n)+...\)</span>.<br />
+   则称<span class="math inline">\(P(A)\)</span>为随机事件<span class="math inline">\(A\)</span>的概率. </font></p>
+<p>  公理化定义中只规定了可列可加性，因而有限可加性是需要我们自己根据公里导出的。这里只证最重要的两条，其他性质主要就是由这两条导出的了。<br />
+<strong><span class="math inline">\(1^o\)</span> 对不可能事件<span class="math inline">\(\varnothing\)</span>有<span class="math inline">\(P(\varnothing)=0\)</span>.</strong><br />
+  proof:取<span class="math inline">\(A_i=\varnothing(i=1,2,...)\)</span>,则<span class="math inline">\(A_i\cap A_j=\varnothing(i\neq j)\)</span>.据公理3可得<span class="math inline">\(P(\varnothing)=P(\bigcup \limits_{i=1}^{\infty}A_i)=\sum \limits_{i=1}^{\infty}P(A_i)=\sum \limits_{i=1}^{\infty}P(\varnothing)\)</span>，又由第一条公理非负性，可知<span class="math inline">\(P(\varnothing)=0\)</span>.<br />
+<strong><span class="math inline">\(2^o\)</span> 有限可加性：若<span class="math inline">\(A_1,A_2,...,A_n\)</span>是两两不相容事件，则<span class="math inline">\(P(\bigcup \limits_{i=1}^{n}A_i)=\sum \limits_{i=1}^{n}P(A_i)\)</span>.</strong><br />
+  proof:取<span class="math inline">\(A_i=\varnothing(i&gt;n)\)</span>,则<span class="math inline">\(\bigcup\limits_{i=1}^{n}A_i=\bigcup\limits_{i=1}^{\infty}A_i\)</span>.又由扩展后<span class="math inline">\(A_1,A_2,...,A_n,A_{n+1},...\)</span>两两不相容，据公理3可得<span class="math inline">\(P(\bigcup \limits_{i=1}^{n}A_i)=P(\bigcup \limits_{i=1}^{\infty}A_i)=\sum \limits_{i=1}^{n}P(A_i)+\sum \limits_{i=n+1}^{\infty}P(\varnothing)=\sum \limits_{i=1}^{n}P(A_i)\)</span>.</p>
+<p>  <strong>容斥原理推广：</strong><br />
+<span class="math display">\[
+P(\bigcup\limits_{i=1}^{n}A_i)=\sum\limits_{r=1}^{n}(-1)^{r+1}\sum\limits_{i_1&lt;...&lt;i_r}P(A_{i_1}\cdots A_{i_r})
+\]</span></p>
+<p>  <strong>Union Bound:</strong><br />
+<span class="math display">\[
+P(A_1\cup A_2\cup\cdots\cup A_n)\leq P(A_1)+P(A_2)+\cdots +P(A_n)
+\]</span></p>
+<p>  以上两条性质都可以使用归纳法证明。<br />
+## 古典概型<br />
+  对于满足<span class="math inline">\(1^o\)</span>试验结果仅有有限种可能<span class="math inline">\(2^o\)</span>每种结果等可能地发生 的试验<span class="math inline">\(E\)</span>，称该类试验为<font color=#F08080 size=4 face="黑体">古典概型(等可能概型)</font>。<br />
+  对于古典概型，有事件<span class="math inline">\(A\)</span>发生的概率为<span class="math inline">\(P(A)=\frac{|A|}{|\Omega|}\)</span>，其中<span class="math inline">\(|A|\)</span>表示事件<span class="math inline">\(A\)</span>包含的<span class="math inline">\(\Omega\)</span>中的基本事件的个数。<br />
+  一些符号约定： <span class="math display">\[
+(n)_r=A_n^r=\frac{n!}{(n-r)!}  
+\]</span> <span class="math display">\[
+(_r^n)=C_n^r=\frac{n!}{r!(n-r)!}
+\]</span></p>
+<h2 id="几何概型">几何概型</h2>
+<p>  对于满足<span class="math inline">\(1^o\)</span>样本空间无限且可测<span class="math inline">\(2^o\)</span>基本事件等可能性（每个事件发生概率仅与其几何测度相关而与位置无关） 的试验<span class="math inline">\(E\)</span>，称该类试验为<font color=#F08080 size=4 face="黑体">几何概型</font>。<br />
+  对于几何概型，有事件<span class="math inline">\(A\)</span>发生的概率为<span class="math inline">\(P(A)=\frac{A的测度}{\Omega的测度}=\frac{\mu(A)}{\mu(\Omega)}\)</span>。</p>
+<h1 id="条件概率与独立性">条件概率与独立性</h1>
+<p>  将事件<span class="math inline">\(A\)</span>发生的条件下事件<span class="math inline">\(B\)</span>发生的概率记为<font color=#B0C4DE size=4 face="黑体"><span class="math inline">\(P(B|A)=\frac{P(AB)}{P(A)}\)</span></font>，注意这要求<span class="math inline">\(P(A)\neq 0\)</span>.<font color=#F08080 size=4 face="黑体">概率为0的事件不一定只有不可能事件哦！</font></p>
 
                 
               </div>
