@@ -19,24 +19,22 @@
   <meta name="author" content="ElysChen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="测试一下吧！ 测试好了就贴上芙宝的教堂图！！！">
+    <meta name="description" content="Heap(堆) 堆是用来存放优先队列的数据结构。二叉堆是完全二叉树中的一种，指除去叶节点所在层外各层均填满，且叶节点所在层的节点都尽可能挂靠在左侧父节点上。  Max-heap(最大堆&#x2F;大顶堆):除根节点外，各节点的值均小于其父节点的值。  Min-heap(最小堆&#x2F;小顶堆):除根节点外，各节点的值均大于其父节点的值。  常使用数组来存放二叉堆，记节点\(u\)的索引为\(index">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试文章">
-<meta property="og:url" content="http://example.com/2024/10/13/%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/index.html">
+<meta property="og:title" content="常用数据结构">
+<meta property="og:url" content="http://example.com/2024/10/19/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="ElysChen">
-<meta property="og:description" content="测试一下吧！ 测试好了就贴上芙宝的教堂图！！！">
+<meta property="og:description" content="Heap(堆) 堆是用来存放优先队列的数据结构。二叉堆是完全二叉树中的一种，指除去叶节点所在层外各层均填满，且叶节点所在层的节点都尽可能挂靠在左侧父节点上。  Max-heap(最大堆&#x2F;大顶堆):除根节点外，各节点的值均小于其父节点的值。  Min-heap(最小堆&#x2F;小顶堆):除根节点外，各节点的值均大于其父节点的值。  常使用数组来存放二叉堆，记节点\(u\)的索引为\(index">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.helloimg.com/i/2024/10/13/670b4eb055555.jpg">
-<meta property="article:published_time" content="2024-10-13T05:52:49.000Z">
-<meta property="article:modified_time" content="2024-10-19T10:07:16.827Z">
+<meta property="article:published_time" content="2024-10-19T09:32:00.000Z">
+<meta property="article:modified_time" content="2024-10-19T13:48:46.404Z">
 <meta property="article:author" content="ElysChen">
-<meta property="article:tag" content="测试">
+<meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.helloimg.com/i/2024/10/13/670b4eb055555.jpg">
   
   
   
-  <title>测试文章 - ElysChen</title>
+  <title>常用数据结构 - ElysChen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -215,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="测试文章"></span>
+            <span id="subtitle" data-typed-text="常用数据结构"></span>
           
         </div>
 
@@ -226,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-13 13:52" pubdate>
-          2024年10月13日 下午
+        <time datetime="2024-10-19 17:32" pubdate>
+          2024年10月19日 下午
         </time>
       </span>
     
@@ -238,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          18 字
+          1.3k 字
         
       </span>
     
@@ -249,7 +247,7 @@
         
         
         
-          1 分钟
+          11 分钟
         
       </span>
     
@@ -295,13 +293,64 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">测试文章</h1>
+            <h1 id="seo-header">常用数据结构</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="测试一下吧">测试一下吧！</h1>
-<p>测试好了就贴上芙宝的教堂图！！！ <img src="https://www.helloimg.com/i/2024/10/13/670b4eb055555.jpg" srcset="/img/loading.gif" lazyload alt="极昼机体" /></p>
+                <h1 id="heap堆"><font color=orange>Heap(堆)</font></h1>
+<p>堆是用来存放优先队列的数据结构。二叉堆是完全二叉树中的一种，指除去叶节点所在层外各层均填满，且叶节点所在层的节点都尽可能挂靠在左侧父节点上。</p>
+<ul>
+<li>Max-heap(最大堆/大顶堆):除根节点外，各节点的值均小于其父节点的值。<br />
+</li>
+<li>Min-heap(最小堆/小顶堆):除根节点外，各节点的值均大于其父节点的值。</li>
+</ul>
+<p>常使用数组来存放二叉堆，记节点<span class="math inline">\(u\)</span>的索引为<span class="math inline">\(index_u\)</span>，则其父节点（若有）索引为<span class="math inline">\(\lfloor index_u/2\rfloor\)</span>，其左子节点（若有）索引为<span class="math inline">\(2index_u\)</span>，右子节点（若有）索引为<span class="math inline">\(2index_u+1\)</span>.<br />
+如此，通过一个节点去找到其父节点和子节点只需<span class="math inline">\(O(1)\)</span>的时间.</p>
+<h2 id="binary-max-heap二叉大顶堆二叉最大堆"><font color=orange>Binary Max-heap（二叉大顶堆/二叉最大堆）</font></h2>
+<h3 id="支持的操作"><font color=brown>支持的操作</font></h3>
+<ul>
+<li>HeapInsert : 向Max-heap中插入一个元素；<br />
+</li>
+<li>HeapGetMax : 从Max-heap中得到值最大的元素（注意并不将该元素从堆中取出！）；<br />
+</li>
+<li>HeapExtractMax : 从Max-heap中得到并移除值最大的元素。</li>
+</ul>
+<h3 id="支持操作的实现"><font color=brown>支持操作的实现</font></h3>
+<h4 id="o-heapinsert"><span class="math inline">\(1^o\)</span> HeapInsert</h4>
+<p><font color=#B0C4DE size=4 face="黑体">概述</font> 实现插入的同时要维护最大堆的性质。欲插入新元素，可将新元素接到数组的尾部，在图形上相当于将新元素挂靠在首个子节点个数小于2的节点下。此后一直比较新元素的值和其父节点的值，若新元素的值更大，则交换两节点；否则，算法终止。若无父节点，即新元素已成为新的根节点，算法亦终止。<br />
+<font color=#B0C4DE size=4 face="黑体">正确性</font> 若发生交换，则原父节点的值必定小于插入元素的值，，进而插入元素的值大于原父节点的左子节点以及以左子节点为祖先的所有节点的值；而原父节点又必然大于以插入元素所在节点为祖先节点的所有子节点的值，故以交换之后插入元素所在节点为祖先节点的所有子节点构成的树必然保持了原性质，而除去这些节点以外的原来所有节点所构成的树没有和插入元素前无变化，故也最大堆性质不变。唯一会破坏性质的地方就是在插入元素现在所在节点及其父节点之间，即两颗子树连接的地方。由归纳法，可推出算法正确性。<br />
+<font color=#B0C4DE size=4 face="黑体">伪代码</font></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs C">HeapInsert(x):<br>    heap_size++<br>    data[heap_size] = x<br>    idx = heap_size<br>    <span class="hljs-keyword">while</span> (idx&gt;<span class="hljs-number">1</span> and data[Floor(idx/<span class="hljs-number">2</span>)]&lt;data[idx])<br>    Swap(data[Floor(idx/<span class="hljs-number">2</span>)], data[idx])<br>    idx = Floor(idx/<span class="hljs-number">2</span>)<br></code></pre></td></tr></table></figure>
+<p><font color=#B0C4DE size=4 face="黑体">时间复杂度</font> 显然循环数最大为树高，而树高为<span class="math inline">\(O(\lceil lg(n+1)\rceil-1)=O(lgn)\)</span></p>
+<h4 id="o-heapgetmax"><span class="math inline">\(2^o\)</span> HeapGetMax</h4>
+<p>直接将索引为1的元素的值赋予一个新变量即可。时间为<span class="math inline">\(O(1)\)</span>。</p>
+<h4 id="o-heapextractmax"><span class="math inline">\(3^o\)</span> HeapExtractMax</h4>
+<p><font color=#B0C4DE size=4 face="黑体">概述</font> 将根节点移除，将数组中索引最大的元素（记为元素<span class="math inline">\(u\)</span>）填入根节点位置，随后逐层比较<span class="math inline">\(u\)</span>和其所在位置的两个子节点的大小关系，若<span class="math inline">\(u\)</span>比较大的子节点的值小，则交换二者。否则，算法停止。<br />
+<font color=#B0C4DE size=4 face="黑体">正确性</font> 使用归纳法。对于树高为1（<font color=#F08080 size=4 face="黑体">为了行文方便，这里树高指的是根节点的高度+1，因而只有一个节点的树的树高为1，而该节点的高度为0.</font>）的树，即只有一个节点，则显然算法正确；假定对于高度为<span class="math inline">\(k\)</span>的树该算法正确，则对于高度为<span class="math inline">\(k+1\)</span>的树，若索引最大的节点<span class="math inline">\(u\)</span>的值大于深度为1的两个子节点中值较大的，则由于以两子节点为根节点的子树内部没有发生变化，故新树整体仍然维持了最大堆性质；若不然，则<span class="math inline">\(u\)</span>与值较大的子节点交换，值较大的子节点大于另一子节点，而以另一子节点为根节点的子树内部未发生变化，故最大堆性质保留；而<span class="math inline">\(u\)</span>在交换后，成为了一个高度不大于<span class="math inline">\(k\)</span>的树的根节点，而以其两个子节点为根节点的子树内部均未发生变化，由归纳假设知<span class="math inline">\(u\)</span>最后会排到合适的位置。综上，算法正确。<br />
+<font color=#B0C4DE size=4 face="黑体">伪代码</font></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs C">HeapExtractMax():<br>    max_item = data[<span class="hljs-number">1</span>]<br>    data[<span class="hljs-number">1</span>] = data[heap_size--]<br>    MaxHeapify(<span class="hljs-number">1</span>)<br>    <span class="hljs-keyword">return</span> max_item<br><br>MaxHeapify(idx):<br>    idx_l = <span class="hljs-number">2</span>*i, idx_r = <span class="hljs-number">2</span>*i+<span class="hljs-number">1</span><br>    idx_max = (idx_l&lt;=heap_size &amp;&amp; data[idx_l]&gt;data[idx])?idx_l:idx<br>    idx_max = (idx_r&lt;=heap_size &amp;&amp; data[idx_r]&gt;data[idx_max])?idx_r:idx_max<br>    <span class="hljs-keyword">if</span> (idx_max != idx)<br>        Swap(data[idx_max], data[idx])<br>        MaxHeapify(idx_max)<br><br></code></pre></td></tr></table></figure>
+<p><font color=#B0C4DE size=4 face="黑体">时间复杂度</font> 显然递归调用数最大为树高，故时间复杂度亦为<span class="math inline">\(O(lgn)\)</span>.</p>
+<h2 id="priority-queue优先队列"><font color=orange>Priority Queue（优先队列）</font></h2>
+<h3 id="支持的操作-1"><font color=brown>支持的操作</font></h3>
+<ul>
+<li>Add(item) : HeapInsert(item)<br />
+</li>
+<li>Remove() : HeapExtractMax()<br />
+</li>
+<li>GetMax() : HeapGetMax()<br />
+</li>
+<li>UpdatePriority(item,val)</li>
+</ul>
+<h3 id="支持操作的实现-1"><font color=brown>支持操作的实现</font></h3>
+<h4 id="oadditem"><span class="math inline">\(1^o\)</span>Add(item)</h4>
+<p>使用HeapInsert(item)即可，时间复杂度即为HeapInsert(item)的时间复杂度，为<span class="math inline">\(O(lgn)\)</span>.</p>
+<h4 id="oremove"><span class="math inline">\(2^o\)</span>Remove</h4>
+<p>使用HeapExtract()即可，时间复杂度与之相同，为<span class="math inline">\(O(lgn)\)</span>.</p>
+<h4 id="ogetmax"><span class="math inline">\(3^o\)</span>GetMax</h4>
+<h4 id="oupdatepriorityitemval"><span class="math inline">\(4^o\)</span>UpdatePriority(item,val)</h4>
+<h2 id="heapsort"><font color=orange>HeapSort</font></h2>
+<p>请见同目录下“搜索算法”一文。</p>
 
                 
               </div>
@@ -320,8 +369,15 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%88%92%E6%B0%B4/" class="category-chain-item">划水</a>
+  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
   
+  
+    <span>></span>
+    
+  <a href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" class="category-chain-item">数据结构与算法分析</a>
+  
+  
+
   
 
       </span>
@@ -335,7 +391,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E6%B5%8B%E8%AF%95/" class="print-no-link">#测试</a>
+        <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
       
     </div>
   
@@ -347,8 +403,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>测试文章</div>
-      <div>http://example.com/2024/10/13/测试文章/</div>
+      <div>常用数据结构</div>
+      <div>http://example.com/2024/10/19/常用数据结构/</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +416,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月13日</div>
+          <div>2024年10月19日</div>
         </div>
       
       
@@ -392,9 +448,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/13/%E5%8F%A4%E5%85%B8%E6%A6%82%E5%9E%8B%E4%B8%8E%E7%A6%BB%E6%95%A3%E5%9E%8B%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" title="随机事件与概率，条件概率与独立性，离散型随机变量">
+                      <a href="/2024/10/19/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95%E4%B8%8E%E6%A8%A1%E6%8B%9F%E9%80%80%E7%81%AB%E7%AE%97%E6%B3%95/" title="遗传算法与模拟退火算法">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">随机事件与概率，条件概率与独立性，离散型随机变量</span>
+                        <span class="hidden-mobile">遗传算法与模拟退火算法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -402,8 +458,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/13/hello-world/" title="Hello World">
-                        <span class="hidden-mobile">Hello World</span>
+                      <a href="/2024/10/19/%E9%93%BA%E5%9E%AB/" title="铺垫">
+                        <span class="hidden-mobile">铺垫</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
