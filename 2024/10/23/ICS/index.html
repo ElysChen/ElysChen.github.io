@@ -19,22 +19,24 @@
   <meta name="author" content="ElysChen">
   <meta name="keywords" content="">
   
-    <meta name="description" content="函数的增长 渐进记号 \(\Theta\)记号 \[ \Theta(g(n))&#x3D;\{f(n)|\exists c_1,c_2,n_0&gt;0~~s.t.~~\forall n\geq n_0,0\leq c_1g(n)\leq f(n)\leq c_2g(n)\} \] 注意，以上定义要求对\(\forall f(n)\in \Theta(g(n))\)，\(f(n)\)应当是渐进非">
+    <meta name="description" content="第三章 程序的转换及机器级表示 总述  计算机指令分为微指令、机器指令和伪（宏）指令，微指令属于硬件范畴；伪指令是若干机器指令组成的序列，属于软件范畴；机器指令介于二者之间。机器指令的汇编语言表示形式为汇编指令。机器指令与汇编指令一一对应，都与具体机器结构有关，都属于机器级指令。  书中主要阐释C语言和IA-32机器级指令的对应关系，使用寄存器传送语言(RTL)，符号约定如下。  符">
 <meta property="og:type" content="article">
-<meta property="og:title" content="铺垫">
-<meta property="og:url" content="http://example.com/2024/10/19/%E9%93%BA%E5%9E%AB/index.html">
+<meta property="og:title" content="ICS">
+<meta property="og:url" content="http://example.com/2024/10/23/ICS/index.html">
 <meta property="og:site_name" content="ElysChen">
-<meta property="og:description" content="函数的增长 渐进记号 \(\Theta\)记号 \[ \Theta(g(n))&#x3D;\{f(n)|\exists c_1,c_2,n_0&gt;0~~s.t.~~\forall n\geq n_0,0\leq c_1g(n)\leq f(n)\leq c_2g(n)\} \] 注意，以上定义要求对\(\forall f(n)\in \Theta(g(n))\)，\(f(n)\)应当是渐进非">
+<meta property="og:description" content="第三章 程序的转换及机器级表示 总述  计算机指令分为微指令、机器指令和伪（宏）指令，微指令属于硬件范畴；伪指令是若干机器指令组成的序列，属于软件范畴；机器指令介于二者之间。机器指令的汇编语言表示形式为汇编指令。机器指令与汇编指令一一对应，都与具体机器结构有关，都属于机器级指令。  书中主要阐释C语言和IA-32机器级指令的对应关系，使用寄存器传送语言(RTL)，符号约定如下。  符">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-10-19T04:21:25.000Z">
-<meta property="article:modified_time" content="2024-10-19T10:07:32.238Z">
+<meta property="og:image" content="https://www.helloimg.com/i/2024/10/23/6718e823c2ef2.png">
+<meta property="article:published_time" content="2024-10-23T11:41:38.000Z">
+<meta property="article:modified_time" content="2024-10-23T12:13:51.143Z">
 <meta property="article:author" content="ElysChen">
-<meta property="article:tag" content="算法">
+<meta property="article:tag" content="计算机系统基础">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.helloimg.com/i/2024/10/23/6718e823c2ef2.png">
   
   
   
-  <title>铺垫 - ElysChen</title>
+  <title>ICS - ElysChen</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -213,7 +215,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="铺垫"></span>
+            <span id="subtitle" data-typed-text="ICS"></span>
           
         </div>
 
@@ -224,8 +226,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-10-19 12:21" pubdate>
-          2024年10月19日 中午
+        <time datetime="2024-10-23 19:41" pubdate>
+          2024年10月23日 晚上
         </time>
       </span>
     
@@ -236,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.2k 字
+          383 字
         
       </span>
     
@@ -247,7 +249,7 @@
         
         
         
-          10 分钟
+          4 分钟
         
       </span>
     
@@ -293,91 +295,33 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">铺垫</h1>
+            <h1 id="seo-header">ICS</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="函数的增长">函数的增长</h1>
-<h2 id="渐进记号">渐进记号</h2>
-<h3 id="theta记号"><span class="math inline">\(\Theta\)</span>记号</h3>
-<p><span class="math display">\[
-\Theta(g(n))=\{f(n)|\exists c_1,c_2,n_0&gt;0~~s.t.~~\forall n\geq n_0,0\leq c_1g(n)\leq f(n)\leq c_2g(n)\}
-\]</span><br />
-注意，以上定义要求对<span class="math inline">\(\forall f(n)\in \Theta(g(n))\)</span>，<span class="math inline">\(f(n)\)</span>应当是渐进非负的，即<span class="math inline">\(n\)</span>足够大时，<span class="math inline">\(f(n)\)</span>是非负的。对于满足以上条件的<span class="math inline">\(f(n)\)</span>,我们称<span class="math inline">\(g(n)\)</span>是<span class="math inline">\(f(n)\)</span>的一个<strong>渐进紧确界</strong>。</p>
-<h3 id="o记号渐进上界"><span class="math inline">\(O\)</span>记号（渐进上界）</h3>
-<p><span class="math display">\[
-O(g(n))=\{f(n)|\exists c,n_0&gt;0~~s.t.~~\forall n\geq n_0,0\leq f(n)\leq cg(n)\}
-\]</span><br />
-<span class="math inline">\(O\)</span>记号用以描述渐近上界，对于一个算法的时间复杂度而言，当我们说一个算法的时间复杂度为<span class="math inline">\(O(g(n))\)</span>时，我们说的是存在一个<span class="math inline">\(O(g(n))\)</span>的函数<span class="math inline">\(f(n)\)</span>，不管选定怎样的规模为<span class="math inline">\(n\)</span>的输入，<span class="math inline">\(f(n)\)</span>都是运行时间的一个上界。</p>
-<h3 id="omega记号渐进下界"><span class="math inline">\(\Omega\)</span>记号（渐进下界）</h3>
-<p><span class="math display">\[
-\Omega(g(n))=\{f(n)|\exists c,n_0~~s.t.\forall n\geq n_0,0\geq cg(n)\geq f(n)\}  
-\]</span> <span class="math inline">\(\Omega\)</span>记号用以描述渐近下界，当我们说一个算法的渐近下界为<span class="math inline">\(\Omega(g(n))\)</span>时，指的是对任意输入，运行时间不会少于一个<span class="math inline">\(\Omega(g(n))\)</span>的<span class="math inline">\(f(n)\)</span>。<br />
-由此不难得到一个很显然的推论：</p>
-<blockquote>
-<p><strong>T.H.</strong> <span class="math display">\[
-\forall f(n),g(n),~~f(n)=\Theta(g(n))\iff f(n)=O(g(n))~and~f(n)=\Omega(g(n))  
-\]</span></p>
-<hr />
-</blockquote>
-<p><font color=#9370D8 size=3 face="宋体">似乎比起<span class="math inline">\(f(n)=O(g(n))\)</span>，使用<span class="math inline">\(f(n)\in O(g(n))\)</span>更合适？但是书上确实是用的等于，应该也是为了方便平时推导时间复杂度罢（确信）</font><br />
-<br> <font color=#F08080 size=3 face="黑体">补：在后面“等式和不等式中的渐近符号”中确实提到了使用等号代替集合论属于符号的好处。</font></p>
-<h3 id="o记号非渐近紧确上界"><span class="math inline">\(o\)</span>记号（非渐近紧确上界）</h3>
-<p><span class="math display">\[
-o(g(n))=\{f(n)|\forall c&gt;0,\exists n_0&gt;0~~s.t.~~\forall n\geq n_0,0\leq f(n)&lt;cg(n)\}
-\]</span><br />
-注意这里的常数<span class="math inline">\(c\)</span>是任取的，因而尽管<span class="math inline">\(2n^2=O(n^2)\)</span>，但是<span class="math inline">\(2n^2\neq o(n^2)\)</span>.有些书中将<span class="math inline">\(o\)</span>记号定义为<span class="math inline">\(\lim\limits_{n\rightarrow+\infty}\frac{f(n)}{g(n)}=0\)</span>.</p>
-<h3 id="omega记号非渐近紧确下界"><span class="math inline">\(\omega\)</span>记号（非渐近紧确下界）</h3>
-<p><span class="math display">\[
-\omega(g(n))=\{f(n)|\forall c&gt;0,\exists n_0&gt;0,~~s.t.~~\forall n\geq n_0,0\leq cg(n)&lt;f(n)\}  
-\]</span><br />
-相应地也可以用极限表示为<span class="math inline">\(\lim\limits_{n\rightarrow+\infty}\frac{f(n)}{g(n)}=\infty\)</span></p>
-<h2 id="主定理">主定理</h2>
-<blockquote>
-<p><strong>T.H.</strong><br />
-若函数<span class="math inline">\(T(n)\)</span>满足以下递推关系：<br />
-<span class="math display">\[
-T(n)=\left\{
-\begin{array}{ll}
-\Theta(1)&amp; \text{if }~n=1\\
-aT(\frac{n}{b})+f(n)&amp;\text{if }~n=b^i
-\end{array}
-\right. 
-\]</span> 若<span class="math inline">\(a\geq 1,b&gt;1\)</span>，且<span class="math inline">\(f(n)\)</span>为定义在<span class="math inline">\(b\)</span>的幂上的非负函数，则有<br />
-<span class="math display">\[
-T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~~\mathbb{(1)}
-\]</span> 进一步地，有如下渐近界：<br />
-1.若对某个常数<span class="math inline">\(\epsilon&gt;0\)</span>有<span class="math inline">\(f(n)=O(n^{log_ba-\epsilon})\)</span>，则<span class="math inline">\(T(n)=\Theta(n^{log_ba})\)</span>;<br />
-2.若<span class="math inline">\(f(n)=\Theta(n^{log_ba})\)</span>，则<span class="math inline">\(T(n)=\Theta(n^{log_ba}lgn)\)</span>;<br />
-3.若对某个常数<span class="math inline">\(\epsilon&gt;0\)</span>，有<span class="math inline">\(f(n)=\Omega(n^{log_ba+\epsilon})\)</span>，且对某个常数<span class="math inline">\(c&lt;1\)</span>和所有足够大的<span class="math inline">\(n\)</span>有<span class="math inline">\(af(\frac{n}{b})\leq cf(n)\)</span>，则<span class="math inline">\(T(n)=\Theta(f(n))\)</span>。</p>
-<hr />
-</blockquote>
-<p><font color=#B0C4DE size=4 face="黑体">proof:<br />
-(1)式用递推树或者直接思考都是易得的。后面三种情况其实是在讨论<span class="math inline">\(\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^i})\)</span>的渐近界。<br />
-对于第一种情况，有<br />
-<span class="math display">\[
-\begin{align*}
-\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})&amp;=O(\sum\limits_{j=0}^{log_bn-1}a^j(\frac{n}{b^j})^{log_ba-\epsilon})=O(n^{log_ba-\epsilon}\sum\limits_{j=0}^{log_bn-1}(\frac{ab^\epsilon}{b^{log_ba}})^j)\\
-&amp;=O(n^{log_ba-\epsilon}\frac{n^\epsilon-1}{b^\epsilon-1})=O(n^{log_ba})
-\end{align*}
-\]</span> 因而<span class="math inline">\(T(n)=\Theta(n^{log_ba})+O(n^{log_ba})=\Theta(n^{log_ba})\)</span>.<br />
-<br> 对于第二种情况，只需要在前一种情况的推导过程中使用等比数列前的最后一步把<span class="math inline">\(\epsilon=0\)</span>代入并在其基础上继续推导即可：<br />
-<span class="math display">\[
-\begin{align*}
-\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})&amp;=\Theta(\sum\limits_{j=0}^{log_bn-1}a^j(\frac{n}{b^j})^{log_ba})\\
-&amp;=\Theta(n^{log_ba}\sum\limits_{j=0}^{log_bn-1}(\frac{a}{b^{log_ba}})^j)\\
-&amp;=\Theta(n^{log_ba}log_bn)
-\end{align*}
-\]</span> 因而<span class="math inline">\(T(n)=\Theta(n^{log_ba})+\Theta(n^{log_ba}log_bn)=\Theta(n^{log_ba}log_bn)\)</span>.<br />
-<br></p>
-<p>对于第三种情况，由于<span class="math inline">\(af(\frac{n}{b})\leq cf(n)\)</span>，故<span class="math inline">\(f(\frac{n}{b})\leq (\frac{c}{a})f(n)\)</span>，进而有<span class="math inline">\(f(\frac{n}{b^j})\leq (\frac{c}{a})^jf(n)\)</span>，亦即<span class="math inline">\(a^jf(\frac{n}{b^j})\leq c^jf(n)\)</span>.因此，我们有:<br />
-<span class="math display">\[
-\begin{align*}
-\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})\leq O(1)+\sum\limits_{j=0}^{log_bn-1}c^jf(n)\leq O(1)+f(n)\sum\limits_{j=0}^{\infty}c^j\leq \frac{f(n)}{1-c}+O(1)=O(f(n))  
-\end{align*}
-\]</span> 同时由于<span class="math inline">\(\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})\geq a^jf(\frac{n}{b^j})|_{j=0}=f(n)\)</span>,故<span class="math inline">\(g(n)=\Omega(f(n))\)</span>，所以<span class="math inline">\(g(n)=\Theta f(n)\)</span>.<br />
-因而<span class="math inline">\(T(n)=\Theta(n^{log_ba})+\Theta(f(n))=\Theta(f(n))\)</span>，注意此情况的前提条件中给出了<span class="math inline">\(f(n)=\Omega(n^{log_ba+\epsilon})\)</span> </font></p>
+                <h1 id="第三章-程序的转换及机器级表示"><font color=orange>第三章 程序的转换及机器级表示</font></h1>
+<h2 id="总述"><font color=brown>总述</font></h2>
+<ul>
+<li>计算机指令分为微指令、机器指令和伪（宏）指令，微指令属于硬件范畴；伪指令是若干机器指令组成的序列，属于软件范畴；机器指令介于二者之间。机器指令的汇编语言表示形式为<strong>汇编指令</strong>。机器指令与汇编指令一一对应，<strong>都与具体机器结构有关</strong>，都属于<strong>机器级指令</strong>。<br />
+</li>
+<li>书中主要阐释C语言和IA-32机器级指令的对应关系，使用寄存器传送语言(RTL)，符号约定如下。</li>
+</ul>
+<h2 id="符号约定"><font color=brown>符号约定</font></h2>
+<h3 id="寄存器语言"><font color=brown>寄存器语言</font></h3>
+<ul>
+<li><strong>R[r]</strong> 表示寄存器r的内容，<strong>M[addr]</strong> 表示存储单元addr的内容，寄存器r采用不带%的形式表示；<br />
+</li>
+<li><strong>M[PC]</strong> 表示PC所指存储单元的内容，<strong>M[R[r]]</strong> 表示寄存器r的内容所指的存储单元的内容；<br />
+</li>
+<li>传送方向以<span class="math inline">\(\leftarrow\)</span>表示，传送源在右，传送目的在左；</li>
+<li>书中寄存器名称书写约定：寄存器的名称若出现在单独一行的汇编指令或寄存器传送语言中则用小写，若出现在正文段落或其他部分则大写；<br />
+</li>
+<li>书中汇编指令及其名称书写约定：具体一条汇编指令或其名称用小写，泛指一类指令的指令名称时用大写。</li>
+</ul>
+<h3 id="汇编格式"><font color=brown>汇编格式</font></h3>
+<p>采用<strong>AT&amp;T</strong> 汇编格式，格式要求如下： <img src="https://www.helloimg.com/i/2024/10/23/6718e823c2ef2.png" srcset="/img/loading.gif" lazyload alt="AT&amp;T格式" /></p>
+<h2 id="section"><font color=brown></font></h2>
 
                 
               </div>
@@ -396,15 +340,8 @@ T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~
     
       <span class="category-chain">
         
-  <a href="/categories/%E7%AE%97%E6%B3%95/" class="category-chain-item">算法</a>
+  <a href="/categories/ICS/" class="category-chain-item">ICS</a>
   
-  
-    <span>></span>
-    
-  <a href="/categories/%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90/" class="category-chain-item">数据结构与算法分析</a>
-  
-  
-
   
 
       </span>
@@ -418,7 +355,7 @@ T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%AE%97%E6%B3%95/" class="print-no-link">#算法</a>
+        <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/" class="print-no-link">#计算机系统基础</a>
       
     </div>
   
@@ -430,8 +367,8 @@ T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>铺垫</div>
-      <div>http://example.com/2024/10/19/铺垫/</div>
+      <div>ICS</div>
+      <div>http://example.com/2024/10/23/ICS/</div>
     </div>
     <div class="license-meta">
       
@@ -443,7 +380,7 @@ T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年10月19日</div>
+          <div>2024年10月23日</div>
         </div>
       
       
@@ -475,9 +412,9 @@ T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/10/19/%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="常用数据结构">
+                      <a href="/2024/10/25/learning0/" title="learning0">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">常用数据结构</span>
+                        <span class="hidden-mobile">learning0</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -485,8 +422,8 @@ T(n)=\Theta(n^{log_ba})+\sum\limits_{j=0}^{log_bn-1}a^jf(\frac{n}{b^j})  ~~~~~~~
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/10/18/%E8%BF%9E%E7%BB%AD%E6%80%A7%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F/" title="连续型随机变量">
-                        <span class="hidden-mobile">连续型随机变量</span>
+                      <a href="/2024/10/19/%E6%90%9C%E7%B4%A2%E7%AE%97%E6%B3%95/" title="排序与搜索算法">
+                        <span class="hidden-mobile">排序与搜索算法</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

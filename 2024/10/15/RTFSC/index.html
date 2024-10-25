@@ -27,7 +27,7 @@
 <meta property="og:description" content="PA2 mtrace   在~&#x2F;ics2024&#x2F;am-kernels&#x2F;tests&#x2F;cpu-tests&#x2F;build中运行指令riscv64-linux-gnu-readelf -a add-riscv32-nemu.elf，即可查看其对应的符号表。   在.c中找到parse_args函数，在里面添加关于elf读入的设置， 时钟   在ics2024&#x2F;abstract-machine&#x2F;am&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-15T12:39:10.000Z">
-<meta property="article:modified_time" content="2024-10-19T10:07:42.517Z">
+<meta property="article:modified_time" content="2024-10-25T02:44:13.289Z">
 <meta property="article:author" content="ElysChen">
 <meta property="article:tag" content="ics">
 <meta name="twitter:card" content="summary_large_image">
@@ -72,7 +72,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"E3eqMsRkQHIMwQ5xJE98lxk1-gzGzoHsz","app_key":"Ua2T7mzqKeGIxlbGQCQHESN7","server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"E3eqMsRkQHIMwQ5xJE98lxk1-gzGzoHsz","app_key":"Ua2T7mzqKeGIxlbGQCQHESN7","server_url":"https://e3eqmsrk.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          831 字
+          849 字
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          7 分钟
+          8 分钟
         
       </span>
     
@@ -322,6 +322,12 @@
 <a class="sourceLine" id="cb1-10" data-line-number="10">  &#125;</a>
 <a class="sourceLine" id="cb1-11" data-line-number="11">&#125;</a></code></pre></div>
 <p>由此，库函数中但凡需要打印字符的，均使用每次打印单个字符的putch()，无论平台；不同的平台（也即模拟器），均实现自己的putch()函数，并在和各个指令集接洽的处理手段上解决实现putch()所依赖的行为在具体指令中的处理(NEMU中实现putch()依赖的正是outb()函数。)</p>
+<h1 id="可能的问题"><font color=brown>可能的问题</font></h1>
+<ul>
+<li>nemu32.c 实现的J型立即数，使用BITS与SEXT<br />
+</li>
+<li></li>
+</ul>
 
                 
               </div>
