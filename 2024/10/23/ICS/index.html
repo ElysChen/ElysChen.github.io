@@ -28,7 +28,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.helloimg.com/i/2024/10/23/6718e823c2ef2.png">
 <meta property="article:published_time" content="2024-10-23T11:41:38.000Z">
-<meta property="article:modified_time" content="2024-10-23T12:13:51.143Z">
+<meta property="article:modified_time" content="2024-11-01T03:34:34.449Z">
 <meta property="article:author" content="ElysChen">
 <meta property="article:tag" content="计算机系统基础">
 <meta name="twitter:card" content="summary_large_image">
@@ -74,7 +74,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"E3eqMsRkQHIMwQ5xJE98lxk1-gzGzoHsz","app_key":"Ua2T7mzqKeGIxlbGQCQHESN7","server_url":"https://e3eqmsrk.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"|","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":"E3eqMsRkQHIMwQ5xJE98lxk1-gzGzoHsz","app_key":"Ua2T7mzqKeGIxlbGQCQHESN7","server_url":"https://e3eqmsrk.lc-cn-n1-shared.com","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -238,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          383 字
+          481 字
         
       </span>
     
@@ -249,7 +249,7 @@
         
         
         
-          4 分钟
+          5 分钟
         
       </span>
     
@@ -322,6 +322,17 @@
 <h3 id="汇编格式"><font color=brown>汇编格式</font></h3>
 <p>采用<strong>AT&amp;T</strong> 汇编格式，格式要求如下： <img src="https://www.helloimg.com/i/2024/10/23/6718e823c2ef2.png" srcset="/img/loading.gif" lazyload alt="AT&amp;T格式" /></p>
 <h2 id="section"><font color=brown></font></h2>
+<h1 id="x86-64内联汇编"><font color=orange>x86-64内联汇编</font></h1>
+<h2 id="字长的历史"><font color=brown>字长的历史</font></h2>
+<ul>
+<li>字长：CPU中处理的自然单元，是指针的大小，可以直接进行整数/位运算。<br />
+</li>
+<li>8位机（最早期）</li>
+<li>16位机（8086/8088）：地址线是20bit的，4位段寄存器，16位PC，在确定了段为<span class="math inline">\(2^4\)</span>个段中的某一个后，再用PC指示行数。<br />
+</li>
+<li>32位机（Intel x86）</li>
+<li>64位机（x86-64;AARch64;RV64;...）</li>
+</ul>
 
                 
               </div>
